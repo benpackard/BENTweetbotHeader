@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C51DC3F218E86DBA0087DFFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51DC3F118E86DBA0087DFFD /* Foundation.framework */; };
+		C51DC3F418E86DBA0087DFFD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51DC3F318E86DBA0087DFFD /* CoreGraphics.framework */; };
+		C51DC3F618E86DBA0087DFFD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51DC3F518E86DBA0087DFFD /* UIKit.framework */; };
+		C51DC3FC18E86DBA0087DFFD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C51DC3FA18E86DBA0087DFFD /* InfoPlist.strings */; };
+		C51DC3FE18E86DBA0087DFFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C51DC3FD18E86DBA0087DFFD /* main.m */; };
+		C51DC40218E86DBA0087DFFD /* BENAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C51DC40118E86DBA0087DFFD /* BENAppDelegate.m */; };
+		C51DC40418E86DBA0087DFFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C51DC40318E86DBA0087DFFD /* Images.xcassets */; };
+		C51DC40B18E86DBA0087DFFD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51DC40A18E86DBA0087DFFD /* XCTest.framework */; };
+		C51DC40C18E86DBA0087DFFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51DC3F118E86DBA0087DFFD /* Foundation.framework */; };
+		C51DC40D18E86DBA0087DFFD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51DC3F518E86DBA0087DFFD /* UIKit.framework */; };
+		C51DC41518E86DBA0087DFFD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C51DC41318E86DBA0087DFFD /* InfoPlist.strings */; };
+		C51DC41718E86DBA0087DFFD /* BENTweetbotHeaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C51DC41618E86DBA0087DFFD /* BENTweetbotHeaderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C51DC40E18E86DBA0087DFFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C51DC3E618E86DBA0087DFFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C51DC3ED18E86DBA0087DFFD;
+			remoteInfo = BENTweetbotHeader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C51DC3EE18E86DBA0087DFFD /* BENTweetbotHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BENTweetbotHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C51DC3F118E86DBA0087DFFD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C51DC3F318E86DBA0087DFFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C51DC3F518E86DBA0087DFFD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C51DC3F918E86DBA0087DFFD /* BENTweetbotHeader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BENTweetbotHeader-Info.plist"; sourceTree = "<group>"; };
+		C51DC3FB18E86DBA0087DFFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C51DC3FD18E86DBA0087DFFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C51DC3FF18E86DBA0087DFFD /* BENTweetbotHeader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BENTweetbotHeader-Prefix.pch"; sourceTree = "<group>"; };
+		C51DC40018E86DBA0087DFFD /* BENAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BENAppDelegate.h; sourceTree = "<group>"; };
+		C51DC40118E86DBA0087DFFD /* BENAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BENAppDelegate.m; sourceTree = "<group>"; };
+		C51DC40318E86DBA0087DFFD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C51DC40918E86DBA0087DFFD /* BENTweetbotHeaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BENTweetbotHeaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C51DC40A18E86DBA0087DFFD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C51DC41218E86DBA0087DFFD /* BENTweetbotHeaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BENTweetbotHeaderTests-Info.plist"; sourceTree = "<group>"; };
+		C51DC41418E86DBA0087DFFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C51DC41618E86DBA0087DFFD /* BENTweetbotHeaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BENTweetbotHeaderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C51DC3EB18E86DBA0087DFFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51DC3F418E86DBA0087DFFD /* CoreGraphics.framework in Frameworks */,
+				C51DC3F618E86DBA0087DFFD /* UIKit.framework in Frameworks */,
+				C51DC3F218E86DBA0087DFFD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C51DC40618E86DBA0087DFFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51DC40B18E86DBA0087DFFD /* XCTest.framework in Frameworks */,
+				C51DC40D18E86DBA0087DFFD /* UIKit.framework in Frameworks */,
+				C51DC40C18E86DBA0087DFFD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C51DC3E518E86DBA0087DFFD = {
+			isa = PBXGroup;
+			children = (
+				C51DC3F718E86DBA0087DFFD /* BENTweetbotHeader */,
+				C51DC41018E86DBA0087DFFD /* BENTweetbotHeaderTests */,
+				C51DC3F018E86DBA0087DFFD /* Frameworks */,
+				C51DC3EF18E86DBA0087DFFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C51DC3EF18E86DBA0087DFFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C51DC3EE18E86DBA0087DFFD /* BENTweetbotHeader.app */,
+				C51DC40918E86DBA0087DFFD /* BENTweetbotHeaderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C51DC3F018E86DBA0087DFFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C51DC3F118E86DBA0087DFFD /* Foundation.framework */,
+				C51DC3F318E86DBA0087DFFD /* CoreGraphics.framework */,
+				C51DC3F518E86DBA0087DFFD /* UIKit.framework */,
+				C51DC40A18E86DBA0087DFFD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C51DC3F718E86DBA0087DFFD /* BENTweetbotHeader */ = {
+			isa = PBXGroup;
+			children = (
+				C51DC40018E86DBA0087DFFD /* BENAppDelegate.h */,
+				C51DC40118E86DBA0087DFFD /* BENAppDelegate.m */,
+				C51DC40318E86DBA0087DFFD /* Images.xcassets */,
+				C51DC3F818E86DBA0087DFFD /* Supporting Files */,
+			);
+			path = BENTweetbotHeader;
+			sourceTree = "<group>";
+		};
+		C51DC3F818E86DBA0087DFFD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C51DC3F918E86DBA0087DFFD /* BENTweetbotHeader-Info.plist */,
+				C51DC3FA18E86DBA0087DFFD /* InfoPlist.strings */,
+				C51DC3FD18E86DBA0087DFFD /* main.m */,
+				C51DC3FF18E86DBA0087DFFD /* BENTweetbotHeader-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C51DC41018E86DBA0087DFFD /* BENTweetbotHeaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				C51DC41618E86DBA0087DFFD /* BENTweetbotHeaderTests.m */,
+				C51DC41118E86DBA0087DFFD /* Supporting Files */,
+			);
+			path = BENTweetbotHeaderTests;
+			sourceTree = "<group>";
+		};
+		C51DC41118E86DBA0087DFFD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C51DC41218E86DBA0087DFFD /* BENTweetbotHeaderTests-Info.plist */,
+				C51DC41318E86DBA0087DFFD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C51DC3ED18E86DBA0087DFFD /* BENTweetbotHeader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C51DC41A18E86DBA0087DFFD /* Build configuration list for PBXNativeTarget "BENTweetbotHeader" */;
+			buildPhases = (
+				C51DC3EA18E86DBA0087DFFD /* Sources */,
+				C51DC3EB18E86DBA0087DFFD /* Frameworks */,
+				C51DC3EC18E86DBA0087DFFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BENTweetbotHeader;
+			productName = BENTweetbotHeader;
+			productReference = C51DC3EE18E86DBA0087DFFD /* BENTweetbotHeader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C51DC40818E86DBA0087DFFD /* BENTweetbotHeaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C51DC41D18E86DBA0087DFFD /* Build configuration list for PBXNativeTarget "BENTweetbotHeaderTests" */;
+			buildPhases = (
+				C51DC40518E86DBA0087DFFD /* Sources */,
+				C51DC40618E86DBA0087DFFD /* Frameworks */,
+				C51DC40718E86DBA0087DFFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C51DC40F18E86DBA0087DFFD /* PBXTargetDependency */,
+			);
+			name = BENTweetbotHeaderTests;
+			productName = BENTweetbotHeaderTests;
+			productReference = C51DC40918E86DBA0087DFFD /* BENTweetbotHeaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C51DC3E618E86DBA0087DFFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BEN;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ben Packard";
+				TargetAttributes = {
+					C51DC40818E86DBA0087DFFD = {
+						TestTargetID = C51DC3ED18E86DBA0087DFFD;
+					};
+				};
+			};
+			buildConfigurationList = C51DC3E918E86DBA0087DFFD /* Build configuration list for PBXProject "BENTweetbotHeader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C51DC3E518E86DBA0087DFFD;
+			productRefGroup = C51DC3EF18E86DBA0087DFFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C51DC3ED18E86DBA0087DFFD /* BENTweetbotHeader */,
+				C51DC40818E86DBA0087DFFD /* BENTweetbotHeaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C51DC3EC18E86DBA0087DFFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51DC3FC18E86DBA0087DFFD /* InfoPlist.strings in Resources */,
+				C51DC40418E86DBA0087DFFD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C51DC40718E86DBA0087DFFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51DC41518E86DBA0087DFFD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C51DC3EA18E86DBA0087DFFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51DC40218E86DBA0087DFFD /* BENAppDelegate.m in Sources */,
+				C51DC3FE18E86DBA0087DFFD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C51DC40518E86DBA0087DFFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51DC41718E86DBA0087DFFD /* BENTweetbotHeaderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C51DC40F18E86DBA0087DFFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C51DC3ED18E86DBA0087DFFD /* BENTweetbotHeader */;
+			targetProxy = C51DC40E18E86DBA0087DFFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C51DC3FA18E86DBA0087DFFD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C51DC3FB18E86DBA0087DFFD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C51DC41318E86DBA0087DFFD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C51DC41418E86DBA0087DFFD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C51DC41818E86DBA0087DFFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C51DC41918E86DBA0087DFFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C51DC41B18E86DBA0087DFFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BENTweetbotHeader/BENTweetbotHeader-Prefix.pch";
+				INFOPLIST_FILE = "BENTweetbotHeader/BENTweetbotHeader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C51DC41C18E86DBA0087DFFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BENTweetbotHeader/BENTweetbotHeader-Prefix.pch";
+				INFOPLIST_FILE = "BENTweetbotHeader/BENTweetbotHeader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C51DC41E18E86DBA0087DFFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BENTweetbotHeader.app/BENTweetbotHeader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BENTweetbotHeader/BENTweetbotHeader-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BENTweetbotHeaderTests/BENTweetbotHeaderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C51DC41F18E86DBA0087DFFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BENTweetbotHeader.app/BENTweetbotHeader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BENTweetbotHeader/BENTweetbotHeader-Prefix.pch";
+				INFOPLIST_FILE = "BENTweetbotHeaderTests/BENTweetbotHeaderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C51DC3E918E86DBA0087DFFD /* Build configuration list for PBXProject "BENTweetbotHeader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C51DC41818E86DBA0087DFFD /* Debug */,
+				C51DC41918E86DBA0087DFFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C51DC41A18E86DBA0087DFFD /* Build configuration list for PBXNativeTarget "BENTweetbotHeader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C51DC41B18E86DBA0087DFFD /* Debug */,
+				C51DC41C18E86DBA0087DFFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C51DC41D18E86DBA0087DFFD /* Build configuration list for PBXNativeTarget "BENTweetbotHeaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C51DC41E18E86DBA0087DFFD /* Debug */,
+				C51DC41F18E86DBA0087DFFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C51DC3E618E86DBA0087DFFD /* Project object */;
+}
