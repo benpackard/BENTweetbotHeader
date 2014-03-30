@@ -10,13 +10,6 @@
 
 #import "BENHeaderView.h"
 
-@interface BENMainView ()
-
-@property BENHeaderView *headerView;
-@property UIImageView *contentImage;
-
-@end
-
 @implementation BENMainView
 
 - (id)initWithFrame:(CGRect)frame

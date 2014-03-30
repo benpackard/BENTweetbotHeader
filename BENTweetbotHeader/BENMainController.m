@@ -9,6 +9,7 @@
 #import "BENMainController.h"
 
 #import "BENMainView.h"
+#import "BENHeaderView.h"
 
 @interface BENMainController ()
 
@@ -41,26 +42,22 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-//	if (scrollView.contentOffset.y > 0) return;
+	if (scrollView.contentOffset.y > 0) return;
 	
-//	NSLog(@"\n\ncontentoffset is %f", scrollView.contentOffset.y);
-	self.mainView.headerCenterYConstraint.constant = MIN(scrollView.contentOffset.y / 2.0f, 0);
-	CGFloat nativeHeight = self.mainView.headerImage.image.size.height;
-	self.mainView.headerHeightConstraint.constant = MAX(nativeHeight +  -scrollView.contentOffset.y, nativeHeight);
-//self.mainView.headerCenterYConstraint.multiplier = scrollView.contentOffset.y / 2.0f;
-//	NSLog(@"constraint is %f", self.mainView.headerCenterYConstraint.constant);
-//	NSLog(@"equals %f", scrollView.contentOffset.y / 2);
-//	//scale the header view as the scrollview is pulled down (but don't let it shrink when pushed up)
-//	NSInteger navbarOffset = 64;
-//	NSInteger heightConstraintValue = 243;
-//	NSInteger additionalWidthValue = 47;
-//	self.headerHeightConstraint.constant = MAX(heightConstraintValue + -self.scrollView.contentOffset.y - navbarOffset, heightConstraintValue);
-//	self.headerWidthConstriant.constant = additionalWidthValue + MAX(-self.scrollView.contentOffset.y - navbarOffset, 0);
+	//move and scale the image
+	self.mainView.headerCenterYConstraint.constant = scrollView.contentOffset.y / 2.0;
+	self.mainView.headerHeightConstraint.constant = self.mainView.headerImage.image.size.height + -scrollView.contentOffset.y;
+	
+	//fade the header content
+	CGFloat fadingRange = 70;
+	self.mainView.headerView.alpha = 1.0 - -scrollView.contentOffset.y/fadingRange;
+	
+	
 }
 
 - (void)dealloc
 {
-//	self.scrollView.delegate = nil;
+	self.mainView.scrollView.delegate = nil;
 }
 
 @end
