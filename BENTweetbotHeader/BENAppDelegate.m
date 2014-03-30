@@ -8,14 +8,18 @@
 
 #import "BENAppDelegate.h"
 
+#import "BENMainController.h"
+
 @implementation BENAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	BENMainController *controller = [[BENMainController alloc] initWithNibName:nil bundle:nil];
+    UINavigationController *navController = [[UINavigationController alloc] init];
+	[navController pushViewController:controller animated:NO];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+	self.window.rootViewController = navController;
+	[self.window makeKeyAndVisible];
     return YES;
 }
 
