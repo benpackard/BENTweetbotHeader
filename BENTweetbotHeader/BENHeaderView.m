@@ -15,7 +15,6 @@
     self = [super initWithFrame:frame];
     if (self)
 	{
-//		self.backgroundColor = [UIColor grayColor];
 		UIColor *offWhite = [UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1.0];
 		
 		UIImageView *profileImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ProfilePic"]];

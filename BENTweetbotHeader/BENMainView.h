@@ -12,7 +12,7 @@
 @interface BENMainView : UIView
 
 @property UIScrollView *scrollView;
-@property UIImageView *headerImage, *contentImage;
+@property UIImageView *headerImage, *blurredImage, *contentImage;
 @property BENHeaderView *headerView;
 @property NSLayoutConstraint *headerCenterYConstraint, *headerHeightConstraint;
 

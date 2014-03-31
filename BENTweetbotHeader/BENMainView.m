@@ -29,6 +29,19 @@
 		self.headerImage.translatesAutoresizingMaskIntoConstraints = NO;
 		[self.scrollView addSubview:self.headerImage];
 		
+		CIContext *context = [CIContext contextWithOptions:nil];
+		CIImage *inputImage = [CIImage imageWithCGImage:self.headerImage.image.CGImage];
+		CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
+		[filter setValue:inputImage forKey:kCIInputImageKey];
+		[filter setValue:[NSNumber numberWithFloat:15.0f] forKey:@"inputRadius"];
+		CIImage *result = [filter valueForKey:kCIOutputImageKey];
+		CGImageRef cgImage = [context createCGImage:result fromRect:[inputImage extent]];
+		UIImage *blurred = [UIImage imageWithCGImage:cgImage];
+		CGImageRelease(cgImage);
+		self.blurredImage = [[UIImageView alloc] initWithImage:blurred];
+		self.blurredImage.translatesAutoresizingMaskIntoConstraints = NO;
+		[self.scrollView addSubview:self.blurredImage];
+		
 		self.headerView = [[BENHeaderView alloc] init];
 		self.headerView.translatesAutoresizingMaskIntoConstraints = NO;
 		[self.scrollView addSubview:self.headerView];
@@ -65,7 +78,15 @@
 														multiplier:1
 														  constant:0]];
 		
-		//the header image's center is vertically aligned with the header view's
+		//the header image's center is aligned with the header view's
+		[self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.headerImage
+																	 attribute:NSLayoutAttributeCenterX
+																	 relatedBy:NSLayoutRelationEqual
+																		toItem:self.headerView
+																	 attribute:NSLayoutAttributeCenterX
+																	multiplier:1
+																	  constant:0]];
+		
 		self.headerCenterYConstraint = [NSLayoutConstraint constraintWithItem:self.headerImage
 																	attribute:NSLayoutAttributeCenterY
 																	relatedBy:NSLayoutRelationEqual
@@ -102,7 +123,37 @@
 														 attribute:NSLayoutAttributeHeight
 														multiplier:aspectRatio
 														  constant:0.5]];
-    }
+		
+		//the blurred image's position and size should always match the original
+		[self addConstraint:[NSLayoutConstraint constraintWithItem:self.blurredImage
+														 attribute:NSLayoutAttributeCenterX
+														 relatedBy:NSLayoutRelationEqual
+															toItem:self.headerImage
+														 attribute:NSLayoutAttributeCenterX
+														multiplier:1
+														  constant:0]];
+		[self addConstraint:[NSLayoutConstraint constraintWithItem:self.blurredImage
+														 attribute:NSLayoutAttributeCenterY
+														 relatedBy:NSLayoutRelationEqual
+															toItem:self.headerImage
+														 attribute:NSLayoutAttributeCenterY
+														multiplier:1
+														  constant:0]];
+		[self addConstraint:[NSLayoutConstraint constraintWithItem:self.blurredImage
+														 attribute:NSLayoutAttributeWidth
+														 relatedBy:NSLayoutRelationEqual
+															toItem:self.headerImage
+														 attribute:NSLayoutAttributeWidth
+														multiplier:1
+														  constant:0]];
+		[self addConstraint:[NSLayoutConstraint constraintWithItem:self.blurredImage
+														 attribute:NSLayoutAttributeHeight
+														 relatedBy:NSLayoutRelationEqual
+															toItem:self.headerImage
+														 attribute:NSLayoutAttributeHeight
+														multiplier:1
+														  constant:0]];
+	}
     return self;
 }
 

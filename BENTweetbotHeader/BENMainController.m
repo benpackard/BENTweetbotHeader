@@ -52,7 +52,8 @@
 	CGFloat fadingRange = 70;
 	self.mainView.headerView.alpha = 1.0 - -scrollView.contentOffset.y/fadingRange;
 	
-	
+	//hide the blurred image
+	self.mainView.blurredImage.alpha = 1.0 - -scrollView.contentOffset.y/fadingRange;
 }
 
 - (void)dealloc
