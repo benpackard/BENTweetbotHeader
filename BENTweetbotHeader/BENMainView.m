@@ -29,17 +29,7 @@
 		self.headerImage.translatesAutoresizingMaskIntoConstraints = NO;
 		[self.scrollView addSubview:self.headerImage];
 		
-		CIContext *context = [CIContext contextWithOptions:nil];
-		CIImage *inputImage = [CIImage imageWithCGImage:self.headerImage.image.CGImage];
-		CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
-		[filter setValue:inputImage forKey:kCIInputImageKey];
-		[filter setValue:[NSNumber numberWithFloat:15.0f] forKey:@"inputRadius"];
-		CIImage *result = [filter valueForKey:kCIOutputImageKey];
-		CGImageRef cgImage = [context createCGImage:result fromRect:[inputImage extent]];
-		UIImage *blurred = [UIImage imageWithCGImage:cgImage];
-		CGImageRelease(cgImage);
-		self.blurredImage = [[UIImageView alloc] initWithImage:blurred];
-		self.blurredImage.translatesAutoresizingMaskIntoConstraints = NO;
+		[self createBlurredImage];
 		[self.scrollView addSubview:self.blurredImage];
 		
 		self.headerView = [[BENHeaderView alloc] init];
@@ -155,6 +145,37 @@
 														  constant:0]];
 	}
     return self;
+}
+
+- (void)createBlurredImage
+{
+	CIContext *context = [CIContext contextWithOptions:nil];
+	
+	//create some darkness
+	CIFilter *blackGenerator = [CIFilter filterWithName:@"CIConstantColorGenerator"];
+	CIColor *black = [CIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.6];
+	[blackGenerator setValue:black forKey:@"inputColor"];
+	CIImage *blackImage = [blackGenerator valueForKey:@"outputImage"];
+	
+	//apply that black
+	CIFilter *compositeFilter = [CIFilter filterWithName:@"CIMultiplyBlendMode"];
+	[compositeFilter setValue:blackImage forKey:@"inputImage"];
+	CIImage *inputImage = [CIImage imageWithCGImage:self.headerImage.image.CGImage];
+	[compositeFilter setValue:inputImage forKey:@"inputBackgroundImage"];
+	CIImage *darkenedImage = [compositeFilter outputImage];
+	
+	//blur the image
+	CIFilter *blurFilter = [CIFilter filterWithName:@"CIGaussianBlur"];
+	[blurFilter setDefaults];
+	[blurFilter setValue:@(12) forKey:@"inputRadius"];
+	[blurFilter setValue:darkenedImage forKey:kCIInputImageKey];
+	CIImage *blurredImage = [blurFilter outputImage];
+	
+	//add it
+	CGImageRef cgimg = [context createCGImage:blurredImage fromRect:inputImage.extent];
+	self.blurredImage = [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:cgimg]];
+	self.blurredImage.translatesAutoresizingMaskIntoConstraints = NO;
+	CGImageRelease(cgimg);
 }
 
 @end

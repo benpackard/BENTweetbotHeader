@@ -44,9 +44,15 @@
 {
 	if (scrollView.contentOffset.y > 0) return;
 	
-	//move and scale the image
+	//move the center of the image
 	self.mainView.headerCenterYConstraint.constant = scrollView.contentOffset.y / 2.0;
-	self.mainView.headerHeightConstraint.constant = self.mainView.headerImage.image.size.height + -scrollView.contentOffset.y;
+
+	//scale up the image, but only after the overlap is revealed
+	BOOL shouldExpand = self.mainView.headerView.frame.size.height + -scrollView.contentOffset.y > self.mainView.headerImage.image.size.height;
+	CGFloat overlap = self.mainView.headerImage.image.size.height - self.mainView.headerView.frame.size.height;
+	CGFloat additionalHeight = shouldExpand ? -scrollView.contentOffset.y - overlap : 0;
+	self.mainView.headerHeightConstraint.constant = self.mainView.headerImage.image.size.height + additionalHeight;
+
 	
 	//fade the header content
 	CGFloat fadingRange = 70;
