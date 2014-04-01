@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BENHeaderView;
+@class BENProfileView;
 
 @interface BENMainView : UIView
 
 @property UIScrollView *scrollView;
 @property UIImageView *headerImage, *blurredImage, *contentImage;
-@property BENHeaderView *headerView;
+@property BENProfileView *profileView;
 @property NSLayoutConstraint *headerCenterYConstraint, *headerHeightConstraint;
 
 @end

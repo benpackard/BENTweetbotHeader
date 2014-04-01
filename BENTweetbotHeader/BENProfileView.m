@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Ben Packard. All rights reserved.
 //
 
-#import "BENHeaderView.h"
+#import "BENProfileView.h"
 
-@implementation BENHeaderView
+@implementation BENProfileView
 
 - (id)initWithFrame:(CGRect)frame
 {

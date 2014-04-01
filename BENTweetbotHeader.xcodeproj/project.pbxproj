@@ -14,7 +14,7 @@
 		C51DC3FE18E86DBA0087DFFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C51DC3FD18E86DBA0087DFFD /* main.m */; };
 		C51DC40218E86DBA0087DFFD /* BENAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C51DC40118E86DBA0087DFFD /* BENAppDelegate.m */; };
 		C51DC40418E86DBA0087DFFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C51DC40318E86DBA0087DFFD /* Images.xcassets */; };
-		C51DC42D18E87B830087DFFD /* BENHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51DC42A18E87B830087DFFD /* BENHeaderView.m */; };
+		C51DC42D18E87B830087DFFD /* BENProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51DC42A18E87B830087DFFD /* BENProfileView.m */; };
 		C51DC42E18E87B830087DFFD /* BENMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = C51DC42C18E87B830087DFFD /* BENMainController.m */; };
 		C51DC43518E898800087DFFD /* header.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C51DC43318E898800087DFFD /* header.JPG */; };
 		C51DC43618E898800087DFFD /* header@2x.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C51DC43418E898800087DFFD /* header@2x.JPG */; };
@@ -37,8 +37,8 @@
 		C51DC40118E86DBA0087DFFD /* BENAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BENAppDelegate.m; sourceTree = "<group>"; };
 		C51DC40318E86DBA0087DFFD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C51DC40A18E86DBA0087DFFD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		C51DC42918E87B830087DFFD /* BENHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BENHeaderView.h; sourceTree = "<group>"; };
-		C51DC42A18E87B830087DFFD /* BENHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BENHeaderView.m; sourceTree = "<group>"; };
+		C51DC42918E87B830087DFFD /* BENProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BENProfileView.h; sourceTree = "<group>"; };
+		C51DC42A18E87B830087DFFD /* BENProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BENProfileView.m; sourceTree = "<group>"; };
 		C51DC42B18E87B830087DFFD /* BENMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BENMainController.h; sourceTree = "<group>"; };
 		C51DC42C18E87B830087DFFD /* BENMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BENMainController.m; sourceTree = "<group>"; };
 		C51DC43318E898800087DFFD /* header.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = header.JPG; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 				C51DC42C18E87B830087DFFD /* BENMainController.m */,
 				C51DC43718E8C20C0087DFFD /* BENMainView.h */,
 				C51DC43818E8C20C0087DFFD /* BENMainView.m */,
-				C51DC42918E87B830087DFFD /* BENHeaderView.h */,
-				C51DC42A18E87B830087DFFD /* BENHeaderView.m */,
+				C51DC42918E87B830087DFFD /* BENProfileView.h */,
+				C51DC42A18E87B830087DFFD /* BENProfileView.m */,
 				C51DC40318E86DBA0087DFFD /* Images.xcassets */,
 				C51DC43318E898800087DFFD /* header.JPG */,
 				C51DC43418E898800087DFFD /* header@2x.JPG */,
@@ -227,7 +227,7 @@
 				C51DC42E18E87B830087DFFD /* BENMainController.m in Sources */,
 				C51DC40218E86DBA0087DFFD /* BENAppDelegate.m in Sources */,
 				C51DC3FE18E86DBA0087DFFD /* main.m in Sources */,
-				C51DC42D18E87B830087DFFD /* BENHeaderView.m in Sources */,
+				C51DC42D18E87B830087DFFD /* BENProfileView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

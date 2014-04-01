@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BENHeaderView : UIView
+@interface BENProfileView : UIView
 
 @end

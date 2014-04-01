@@ -8,7 +8,7 @@
 
 #import "BENMainView.h"
 
-#import "BENHeaderView.h"
+#import "BENProfileView.h"
 
 @implementation BENMainView
 
@@ -32,16 +32,16 @@
 		[self createBlurredImage];
 		[self.scrollView addSubview:self.blurredImage];
 		
-		self.headerView = [[BENHeaderView alloc] init];
-		self.headerView.translatesAutoresizingMaskIntoConstraints = NO;
-		[self.scrollView addSubview:self.headerView];
+		self.profileView = [[BENProfileView alloc] init];
+		self.profileView.translatesAutoresizingMaskIntoConstraints = NO;
+		[self.scrollView addSubview:self.profileView];
 		
 		self.contentImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Content"]];
 		self.contentImage.backgroundColor = [UIColor yellowColor];
 		self.contentImage.translatesAutoresizingMaskIntoConstraints = NO;
 		[self.scrollView addSubview:self.contentImage];
 		
-		NSDictionary *views = @{@"scrollView":self.scrollView, @"header":self.headerView, @"content":self.contentImage, @"background":self.headerImage};
+		NSDictionary *views = @{@"scrollView":self.scrollView, @"header":self.profileView, @"content":self.contentImage, @"background":self.headerImage};
 		[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[scrollView]|" options:0 metrics:nil views:views]];
 		[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[scrollView]|" options:0 metrics:nil views:views]];
 		
@@ -49,7 +49,7 @@
 		[self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[header]|" options:0 metrics:nil views:views]];
 		[self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[content]|" options:0 metrics:nil views:views]];
 		
-		for (UIView *view in @[self.headerView, self.contentImage])
+		for (UIView *view in @[self.profileView, self.contentImage])
 		{
 			[self addConstraint:[NSLayoutConstraint constraintWithItem:view
 															 attribute:NSLayoutAttributeWidth
@@ -68,11 +68,11 @@
 														multiplier:1
 														  constant:0]];
 		
-		//the header image's center is aligned with the header view's
+		//the header image's center is aligned with the profile view's
 		[self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.headerImage
 																	 attribute:NSLayoutAttributeCenterX
 																	 relatedBy:NSLayoutRelationEqual
-																		toItem:self.headerView
+																		toItem:self.profileView
 																	 attribute:NSLayoutAttributeCenterX
 																	multiplier:1
 																	  constant:0]];
@@ -80,7 +80,7 @@
 		self.headerCenterYConstraint = [NSLayoutConstraint constraintWithItem:self.headerImage
 																	attribute:NSLayoutAttributeCenterY
 																	relatedBy:NSLayoutRelationEqual
-																	   toItem:self.headerView
+																	   toItem:self.profileView
 																	attribute:NSLayoutAttributeCenterY
 																   multiplier:1
 																	 constant:0];
@@ -96,7 +96,7 @@
 																	constant:self.headerImage.image.size.height];
 		[self.scrollView addConstraint:self.headerHeightConstraint];
 		
-		//maintain the aspect ratio of the image as its height changes
+		//maintain the aspect ratio of the image as its height changes, give or take half a point
 		CGFloat aspectRatio = self.headerImage.image.size.width / self.headerImage.image.size.height;
 		[self addConstraint:[NSLayoutConstraint constraintWithItem:self.headerImage
 														 attribute:NSLayoutAttributeWidth
