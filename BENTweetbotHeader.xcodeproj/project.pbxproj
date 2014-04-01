@@ -19,12 +19,9 @@
 		C51DC43518E898800087DFFD /* header.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C51DC43318E898800087DFFD /* header.JPG */; };
 		C51DC43618E898800087DFFD /* header@2x.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C51DC43418E898800087DFFD /* header@2x.JPG */; };
 		C51DC43918E8C20C0087DFFD /* BENMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51DC43818E8C20C0087DFFD /* BENMainView.m */; };
-		D299C64FC59A44BDBACE3F0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDDEBBB9FDE4E9CAAE0BF97 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		732FAE6CD1D74D92B953F8AA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		BEDDEBBB9FDE4E9CAAE0BF97 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51DC3EE18E86DBA0087DFFD /* BENTweetbotHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BENTweetbotHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51DC3F118E86DBA0087DFFD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C51DC3F318E86DBA0087DFFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,7 +52,6 @@
 				C51DC3F418E86DBA0087DFFD /* CoreGraphics.framework in Frameworks */,
 				C51DC3F618E86DBA0087DFFD /* UIKit.framework in Frameworks */,
 				C51DC3F218E86DBA0087DFFD /* Foundation.framework in Frameworks */,
-				D299C64FC59A44BDBACE3F0B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +64,6 @@
 				C51DC3F718E86DBA0087DFFD /* BENTweetbotHeader */,
 				C51DC3F018E86DBA0087DFFD /* Frameworks */,
 				C51DC3EF18E86DBA0087DFFD /* Products */,
-				732FAE6CD1D74D92B953F8AA /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,7 +82,6 @@
 				C51DC3F318E86DBA0087DFFD /* CoreGraphics.framework */,
 				C51DC3F518E86DBA0087DFFD /* UIKit.framework */,
 				C51DC40A18E86DBA0087DFFD /* XCTest.framework */,
-				BEDDEBBB9FDE4E9CAAE0BF97 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,11 +123,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C51DC41A18E86DBA0087DFFD /* Build configuration list for PBXNativeTarget "BENTweetbotHeader" */;
 			buildPhases = (
-				E2C9694E0F084AA4846B4BEB /* Check Pods Manifest.lock */,
 				C51DC3EA18E86DBA0087DFFD /* Sources */,
 				C51DC3EB18E86DBA0087DFFD /* Frameworks */,
 				C51DC3EC18E86DBA0087DFFD /* Resources */,
-				36995D12EC534589AB05910D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,39 +176,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		36995D12EC534589AB05910D /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E2C9694E0F084AA4846B4BEB /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C51DC3EA18E86DBA0087DFFD /* Sources */ = {
@@ -317,7 +276,6 @@
 		};
 		C51DC41B18E86DBA0087DFFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 732FAE6CD1D74D92B953F8AA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -331,7 +289,6 @@
 		};
 		C51DC41C18E86DBA0087DFFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 732FAE6CD1D74D92B953F8AA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
