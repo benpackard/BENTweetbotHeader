@@ -10,6 +10,8 @@
 
 #import "BENProfileView.h"
 
+#import "UIImage+ImageEffects.h"
+
 @implementation BENMainView
 
 - (id)initWithFrame:(CGRect)frame
@@ -149,41 +151,8 @@
 
 - (void)createBlurredImage
 {
-    CIImage *inputImage = [CIImage imageWithCGImage:self.headerImage.image.CGImage];
-    
-    CIContext *context = [CIContext contextWithOptions:nil];
-    
-    //First, we'll use CIAffineClamp to prevent black edges on our blurred image
-    //CIAffineClamp extends the edges off to infinity (check the docs, yo)
-    CGAffineTransform transform = CGAffineTransformIdentity;
-    CIFilter *clampFilter = [CIFilter filterWithName:@"CIAffineClamp"];
-    [clampFilter setValue:inputImage forKeyPath:kCIInputImageKey];
-    [clampFilter setValue:[NSValue valueWithBytes:&transform objCType:@encode(CGAffineTransform)] forKeyPath:@"inputTransform"];
-    CIImage *clampedImage = [clampFilter outputImage];
-    
-    //Next, create some darkness
-    CIFilter* blackGenerator = [CIFilter filterWithName:@"CIConstantColorGenerator"];
-    CIColor* black = [CIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.6];
-    [blackGenerator setValue:black forKey:@"inputColor"];
-    CIImage* blackImage = [blackGenerator valueForKey:@"outputImage"];
-    
-    //Apply that black
-    CIFilter *compositeFilter = [CIFilter filterWithName:@"CIMultiplyBlendMode"];
-    [compositeFilter setValue:blackImage forKey:@"inputImage"];
-    [compositeFilter setValue:clampedImage forKey:@"inputBackgroundImage"];
-    CIImage *darkenedImage = [compositeFilter outputImage];
-    
-    //Third, blur the image
-    CIFilter *blurFilter = [CIFilter filterWithName:@"CIGaussianBlur"];
-    [blurFilter setDefaults];
-    [blurFilter setValue:@(12) forKey:@"inputRadius"];
-    [blurFilter setValue:darkenedImage forKey:kCIInputImageKey];
-    CIImage *blurredImage = [blurFilter outputImage];
-    
-    CGImageRef cgimg = [context createCGImage:blurredImage fromRect:inputImage.extent];
-	self.blurredImage = [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:cgimg]];
+    self.blurredImage = [[UIImageView alloc] initWithImage:[self.headerImage.image applyBlurWithRadius:6 tintColor:[UIColor colorWithWhite:0 alpha:0.3] saturationDeltaFactor:1.8 maskImage:nil]];
 	self.blurredImage.translatesAutoresizingMaskIntoConstraints = NO;
-    CGImageRelease(cgimg);
 }
 
 @end
