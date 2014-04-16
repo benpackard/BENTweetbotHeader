@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80A5F8A618FE8E750052CCA3 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A5F8A518FE8E750052CCA3 /* UIImage+ImageEffects.m */; };
 		C51DC3F218E86DBA0087DFFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51DC3F118E86DBA0087DFFD /* Foundation.framework */; };
 		C51DC3F418E86DBA0087DFFD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51DC3F318E86DBA0087DFFD /* CoreGraphics.framework */; };
 		C51DC3F618E86DBA0087DFFD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51DC3F518E86DBA0087DFFD /* UIKit.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80A5F8A418FE8E750052CCA3 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		80A5F8A518FE8E750052CCA3 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		C51DC3EE18E86DBA0087DFFD /* BENTweetbotHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BENTweetbotHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51DC3F118E86DBA0087DFFD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C51DC3F318E86DBA0087DFFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,6 +100,8 @@
 				C51DC43818E8C20C0087DFFD /* BENMainView.m */,
 				C51DC42918E87B830087DFFD /* BENProfileView.h */,
 				C51DC42A18E87B830087DFFD /* BENProfileView.m */,
+				80A5F8A418FE8E750052CCA3 /* UIImage+ImageEffects.h */,
+				80A5F8A518FE8E750052CCA3 /* UIImage+ImageEffects.m */,
 				C51DC40318E86DBA0087DFFD /* Images.xcassets */,
 				C51DC43318E898800087DFFD /* header.JPG */,
 				C51DC43418E898800087DFFD /* header@2x.JPG */,
@@ -184,6 +189,7 @@
 			files = (
 				C51DC43918E8C20C0087DFFD /* BENMainView.m in Sources */,
 				C51DC42E18E87B830087DFFD /* BENMainController.m in Sources */,
+				80A5F8A618FE8E750052CCA3 /* UIImage+ImageEffects.m in Sources */,
 				C51DC40218E86DBA0087DFFD /* BENAppDelegate.m in Sources */,
 				C51DC3FE18E86DBA0087DFFD /* main.m in Sources */,
 				C51DC42D18E87B830087DFFD /* BENProfileView.m in Sources */,
